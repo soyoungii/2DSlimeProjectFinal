@@ -27,7 +27,6 @@ public class Thunder : MonoBehaviour
         while (true)
         {
             cooldownImage.fillAmount = 1f;
-            yield return StartCoroutine(Cooldown());
             for (int i = 0; i < 8; i++)
             {
                 Monster target = FindNearestMonsterInRange();
@@ -40,7 +39,7 @@ public class Thunder : MonoBehaviour
                     );
                     GameObject thunder = Instantiate(thunderPrefab, spawnPosition, Quaternion.identity);
                     target.TakeDamage(slime.damage);
-                    Destroy(thunder, 1f);
+                    Destroy(thunder, 0.2f);
                 }
                 yield return new WaitForSeconds(1f);
             }

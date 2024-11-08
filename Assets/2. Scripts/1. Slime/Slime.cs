@@ -44,7 +44,7 @@ public class Slime : MonoBehaviour
 
     [Header("투사체")]
     public GameObject projectilePrefab;
-    public float detectionRange = 5f; // 탐지 범위
+    public float detectionRange = 2.5f; // 탐지 범위
     public float projectileSpeed = 10f;
     private float nextFireTime;
 

@@ -12,8 +12,8 @@ public class Spawner : MonoBehaviour
     public float spawnInterval = 3f; 
     private float baseHp = 1f; 
     private float baseDamage = 1f;
-    private float plusHp = 0.1f;
-    private float plusDamage = 1f;
+    private float plusHp = 1f;
+    private float plusDamage = 2f;
     private int waveCount = 0;  
 
     private float spawnStartX = 2.8f; // 첫 번째 몬스터 스폰 위치

@@ -28,7 +28,7 @@ public class Sphere : MonoBehaviour
             {
                 cooldownImage.fillAmount = 1f;
                 sphereInstance = Instantiate(spherePrefab, spherePrefab.transform.position, Quaternion.identity);
-                Destroy(sphereInstance, 8f);
+                Destroy(sphereInstance, 5f);
             }
             istrue = false;
 

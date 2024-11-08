@@ -43,7 +43,7 @@ public class Starlight : MonoBehaviour
                     GameObject starlight = Instantiate(starlightPrefab, starlightPrefab.transform.position, Quaternion.identity);
                     StartCoroutine(MoveProjectile(starlight, target));
 
-                    Destroy(starlight, 2f);
+                    Destroy(starlight, 1f);
                 }
 
                 yield return new WaitForSeconds(spawnInterval);

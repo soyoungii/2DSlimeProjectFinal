@@ -29,7 +29,7 @@ public class Monster : MonoBehaviour
     {
         //GameManager.Instance.enemies.Add(this);
         target = GameObject.FindGameObjectWithTag("Player").transform;
-    }
+}
 
     private void Update()
     {
