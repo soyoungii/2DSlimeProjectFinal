@@ -35,7 +35,7 @@ public class Meteor : MonoBehaviour
                 GameObject meteor = Instantiate(meteorPrefab, meteorPrefab.transform.position, Quaternion.identity);
 
                 StartCoroutine(MoveMeteor(meteor, target.transform.position));
-                Destroy(meteor, 5f);
+                Destroy(gameObject, 2f);
             }
 
             yield return StartCoroutine(Cooldown());

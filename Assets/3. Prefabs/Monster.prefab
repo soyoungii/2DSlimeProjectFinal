@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  hp: 0.9
+  hp: 1
   moveSpeed: 0.8
   monsterDieParticle: {fileID: 4549219851773887996, guid: 815b0afd5894c6848adb186f197cf656, type: 3}
   monsterProjectilePrefab: {fileID: 2634328362857920209, guid: 14522f167cf3c05499f1b6eb74d887c2, type: 3}

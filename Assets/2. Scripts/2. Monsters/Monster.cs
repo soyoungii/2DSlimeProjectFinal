@@ -9,7 +9,7 @@ public class Monster : MonoBehaviour
     [Tooltip("캐릭터에게 주는 피해량")]
     public float damage = 1; //공격력
     [Tooltip("몬스터 체력")]
-    public float hp = 1f; //체력
+    public float hp = 10f; //체력
     public float moveSpeed; //이동속도
 
     private Transform target; //추적 대상(슬라임)

@@ -10,8 +10,6 @@ public class Spawner : MonoBehaviour
 
     public GameObject monsterPrefab; // 적 프리팹
     public float spawnInterval = 3f; 
-    private float baseHp = 1f; 
-    private float baseDamage = 1f;
     private float plusHp = 1f;
     private float plusDamage = 2f;
     private int waveCount = 0;  
@@ -53,19 +51,19 @@ public class Spawner : MonoBehaviour
             Monster monster = monsterObject.GetComponent<Monster>();
             if (monster != null)
             {
-                float currentHp = baseHp;
-                float currentDamage = baseDamage;
+                float currentHp = monster.hp;
+                float currentDamage = monster.damage;
 
-                if (waveCount > 1)
+                if (waveCount == 0)
                 {
-                    currentHp = baseHp + (plusHp * (waveCount - 1));
-                    currentDamage = baseDamage + (plusDamage * (waveCount - 1));
+                    currentHp = monster.hp;
+                    currentDamage = monster.damage;
                 }
 
                 monster.SetHp(currentHp);
                 monster.SetDamage(currentDamage);
-                float hp = baseHp * (1 + waveCount * 0.1f); // 웨이브마다 체력 증가
-                float damage = baseDamage * (1 + waveCount * 1f); // 웨이브마다 데미지 증가
+                float hp = monster.hp * (1 + waveCount * 0.1f); // 웨이브마다 체력 증가
+                float damage = monster.damage * (1 + waveCount * 1f); // 웨이브마다 데미지 증가
                 monster.SetHp(hp);
                 monster.SetDamage(damage);
             }
